@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCademy</title>
+    <link rel="stylesheet" href="styles/stylessss.css">
+</head>
+<body>
+    <header id="menu">
+        <div id="logoWeb"> <a href="indexcode.html">{Code}Cademy</a></div>
+        <nav>
+            <div class="menu lenguaje">
+            <a href="lenguajes.html">Lenguajes</a>
+            </div>
+            <div class="menu profesores">
+            <a href="profesores.html">Profesores</a>
+            </div>
+            <div class="menu resenia">
+            <a href="reviews.html">Deja tu reseña</a>
+            </div>
+            <div class="menu nosotros">
+            <a href="about.html">Sobre nosotros</a>
+            </div>
+        </nav>
+    </header>
+    <section class="banner">
+        <div class="banner fondo">
+        <h1>¡Aprende cualquier lenguaje desde cero!</h1>
+        <p>Sé un verdadero...</p>
+        </div>
+    </section>
+    <section class="infoReviews">
+        <h1>Reseñas de la Página</h1>
+        <div class="FormSpace">
+            <form id="reviewForm">
+                <input type="text" id="name" placeholder="Tu nombre" required>
+                <textarea id="review" placeholder="Escribe tu reseña" required></textarea>
+                <button type="submit" onclick="agregarComentario()">Enviar Reseña</button>
+            </form>
+        </div>
+
+        <div id="reviewsSpace">
+        </div>
+    </section>
+    <footer id="footer">Política de cookies</footer>
+    <div id="overlay"></div>
+    <div id="dialogo">
+        <h2>Politica de cookies y cookies</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Ipsa eum incidunt consectetur tempora magnam possimus,
+            quo qui fugiat nihil at? Eveniet dolor odit veritatis corporis sapiente sunt
+            similique? Numquam, laboriosam!</p>
+        <div class="controles">
+        <button id="cerrar">Cerrar</button>
+        <button id="aceptar">Aceptar</button>
+        </div>
+    </div>
+    <script src="js/main2.js"></script>
+</body>
+</html>

@@ -1,0 +1,963 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',Arial, sans-serif;
+}
+body {
+    background-color:#E6E6E6;
+    color: #000;
+}
+a{
+    text-decoration: none;   
+}
+/*------------------- Menú y sus animaciones -------------------*/
+header{
+    position: fixed;
+    background-color:#02153d;
+    color: white;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+}
+#logoWeb a{
+    text-decoration: none;
+    color: white;
+}
+#logoWeb{
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+header nav {
+    display: flex;
+    gap: 250px;
+    margin: 0 auto;
+    margin-left: auto; 
+}
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.menu {
+    text-align: center;
+    width: auto;
+}
+.menu a:hover{
+    color: red;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.menu a::after {
+    content: " ";       
+    position: absolute;        
+    text-align: center;
+    color: red;
+    font-size: 14px;
+    transform: scaleX(0);  
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.menu a:hover::after {
+    opacity: 1;            
+    transform: scaleX(1);   
+}
+.lenguaje a::after {
+    content: "{ }";       
+    position: absolute;        
+    text-align: center;
+    color: red;
+    font-size: 17px;
+    transform: scaleX(0);  
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.lenguaje a:hover::after {
+    opacity: 1;            
+    transform: scaleX(1);   
+}
+.profesores a::after {
+    content: "👨‍🏫";       
+    position: absolute;        
+    text-align: center;
+    color: red;
+    font-size: 17px;
+    transform: scaleX(0);  
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.profesores a:hover::after {
+    opacity: 1;            
+    transform: scaleX(1);   
+}
+.resenia a::after {
+    content: "💬";       
+    position: absolute;        
+    text-align: center;
+    color: red;
+    font-size: 17px;
+    transform: scaleX(0);  
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.resenia a:hover::after {
+    opacity: 1;            
+    transform: scaleX(1);   
+}
+.nosotros a::after {
+    content: "🚀";       
+    position: absolute;        
+    text-align: center;
+    color: red;
+    font-size: 17px;
+    transform: scaleX(0);  
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.nosotros a:hover::after {
+    opacity: 1;            
+    transform: scaleX(1);   
+}
+/*------------------- Banner -------------------*/
+.banner {
+    text-align: center;
+}
+.fondo{
+    width: 100%;
+    height: 70vh;
+    padding: 100px 20px;
+    background-image: url("../img/bannercode.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.banner h1 {
+    font-size: 70px;
+    margin-bottom: 10px;
+    color:#02153d;
+}
+.banner p {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+/*------------------- Cartas y sus animaciones -------------------*/
+#contenedorCartas {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 15px;
+    gap: 20px;
+    height: auto;
+    margin-bottom: 15px;
+}
+.cardResenia {
+    width: 450px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 8px #BBBBB9;
+}
+.cardHeader {
+    background-color: #002366;
+    height: 120px;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+}
+.cardContenido {
+    padding: 10px;
+    text-align: center;
+}
+.info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+.hours {
+    font-size: 16px;
+    color: white;
+}
+.logo.java{
+    background-image: url("../img/java.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    border-radius: 140px;
+}
+.icon.java{
+    background-image: url("../img/midu.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    border-radius: 140px;
+}
+.logo.javascript{
+    background-image: url("../img/JavaScript.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    border-radius: 140px;
+}
+.icon.javascript{
+    background-image: url("../img/moure.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    border-radius: 140px;
+}
+.logo.angular{
+    background-image: url("../img/angular.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    border-radius: 140px;
+}
+.icon.angular{
+    background-image: url("../img/afor.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    border-radius: 140px;
+}
+.logo.python{
+    background-image: url("../img/python.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    border-radius: 140px;
+}
+.icon.python{
+    background-image: url("../img/manzdev.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    border-radius: 140px;
+}
+.rating {
+    text-align: center;
+    font-size: 26px;
+    color: gold;
+    margin: 10px 0;
+}
+.fotoUser {
+    width: 100px;
+    height: 100px;
+    border-radius: 200px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.user1 {
+    background-image: url("../img/user1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.user2 {
+    background-image: url("../img/user2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.user3 {
+    background-image: url("../img/user3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.user4 {
+    background-image: url("../img/user4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.user5 {
+    background-image: url("../img/user5.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.user6 {
+    background-image: url("../img/user6.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.user7 {
+    background-image: url("../img/user7.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.user8 {
+    background-image: url("../img/user8.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.cardContenido h4 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+.cardContenido p {
+    font-size: 23px;
+    color: #666;
+    text-align: center;
+}
+.botonReview {
+    display: block;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #02153d;
+    font-weight: bold;
+    cursor: pointer; 
+    color: white;
+}
+.botonReview:hover {
+    background-color:  #007bff;
+}
+/*------------------- Footer, Coockies y sus animaciones -------------------*/
+#footer {
+    background-color:#02153d;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0;
+    cursor: pointer;
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+#dialogo {
+    width: 50%;
+    height: auto;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+   
+}
+#dialogo h2, p{
+    margin-bottom: 25px;
+}
+#dialogo button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #02153d;
+    color: white;
+    font-size: 16px;
+}
+#dialogo button:hover {
+    background-color:  #007bff;
+}
+/*-------------------------------- Lenguajes ------------------------------------*/
+.cardContent{
+    width: 450px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px #BBBBB9;
+}
+.cardLenguaje {
+    height: auto;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    background-color: #002366;
+    border-radius: 10px 10px 0 0 ;
+}
+.cardVideo {
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+#video {
+	width: 100%;
+    height: 100%;  
+}
+/*------------------------------------José__Formulario------------------------*/
+.infoReviews{   
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.FormSpace{
+    background-color: #02153d;
+    width: 344px;
+    height: 132px;
+    padding: 18px;
+    border-radius: 18px;
+}
+#reviewForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+#reviewForm button{
+    width: 121px;
+    height: 26px;
+}
+#reviewsSpace{
+    width: 96%;
+    height: auto;
+    background-color: #02153db2;
+    border-radius: 6px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+/*Lo agrego yo pero el contenedor no se amplia 
+junto con el contenedor y termina desbordandolo
+*/
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-auto-rows: 80px;
+}
+/*-------------------ESTILOS DE LOS COMENTARIOS AGREGADOS---------*/
+.comentario{
+    background-color: white;
+    border: 1px solid;
+    border-radius: 8px;
+   
+    margin: 10px;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.comentario:hover{
+    transform: scale(1.03);
+    outline: 1px solid #030303;
+}
+
+/*-------------------------------- Jhon Profesores ------------------------------------*/
+.contenedorProfesores{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-auto-rows: 1fr;
+    gap: 3%;
+    margin: 5%;
+}
+.link{
+    text-decoration: none;
+}
+.caja{
+  border: 2px solid;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  height: auto;
+  background: linear-gradient(180deg, #02153D, #020c1e);
+  /*background-color: #151a36;*/
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease;
+  
+}
+/*la cabecera del articulo*/
+.cabecera{
+  border-radius: 0.75rem;
+  background-color: #02153D;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding-top: 2px;
+  margin-bottom: 3px; 
+  color: white;
+}
+.parte1{
+  width: 50%;
+  height: auto;
+  margin: 3px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoCabecera{
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 8%;
+  box-sizing: border-box;
+}
+.logoCabecera img{
+    width: 34px;
+    height: 34px;
+    border-radius: 7px;
+}
+.textI{
+  padding-left: 4%;
+  width: 80%;
+  align-content: center;
+}
+
+.parte2{
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 5%;
+}
+.parte2 span{
+    padding: 3px;
+    border-radius: 5px;
+    background-color: rgb(248 113 113 / var(--tw-bg-opacity, 1));
+    color: #000;
+}
+/*titulo*/
+.titulo{
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  margin-bottom: 3px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  opacity: 0.9;
+}
+/*Parte del medio*/
+.center{
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+/*Esta es la parte izquiera imagen y nombre*/
+.medioIzq{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.medioIzq img{
+    width: 100%;
+    height: auto;
+    padding: 0.7em;
+    border-radius: 1em;
+}
+.nombreProf{
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    opacity: 0.7;
+}
+/*----------Parte derecha con descripcion y boton-------*/
+.medioDer{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+.medioDer p{
+    padding-top: 5px;
+    padding-left: 5%;
+    font-size: 14px;
+    color: white;
+    opacity: 0.6;
+    text-align: left;
+}
+.boton {
+    padding-top: 3%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: center;
+}
+.boton span{
+    color: white;
+    border-color: #ffffff;
+    background-color: #87a7f8;
+    border-radius: 5px;
+    padding: 2%;
+    width: 80%;
+    transition: transform 0.3s ease;
+}
+
+/*hovers*/
+.boton span:hover{
+    background-color: #87a7f8;
+    transform: scale(1.1);
+}
+.caja:hover{
+    outline: 1px solid #fff;
+    
+}
+
+
+/*-------------------------------- José Sobre Nosotros ------------------------------------*/
+
+.infoAbout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.historia {
+    width: 1381px;
+    height: 302px;
+    margin-top: 80px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 8px #BBBBB9;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.infoAbout p {
+    padding: 13px;
+    font-size: 13px;
+}
+
+
+
+.ImagenHistoria {
+    overflow: hidden;
+    width: 45%;
+    height: 307px;
+}
+.imgaenHistoria{
+    width:395px;
+    height: 390px;
+}
+.infoHistoria{
+    padding: 24px;
+}
+
+
+.logros {
+    width: 1381px;
+    height: 243px;
+    margin: 7px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 8px #BBBBB9;
+}
+
+.valores{
+    width: 1381px;
+    height: 243px;
+    margin: 7px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 8px #BBBBB9;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.ImagenValores{
+    overflow: hidden;
+    width: 100%;
+    height: 253px;
+}
+.imgValores{
+    width: 646px;
+     height:288px;
+}
+
+.infoValores{
+    width: 1575px;
+    padding: 11px;
+}
+
+.metodosAprendizaje{
+    width: 1381px;
+    height: 100px;
+    margin: 7px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 8px #BBBBB9;
+}
+
+.contacto{
+    width: 1381px;
+    height: 243px;
+    margin-bottom: 40px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 8px #BBBBB9;
+
+}
+
+.ImagenContacto{
+    overflow: hidden;
+    width: 100%;
+    height: 162px;
+}
+
+.imgContacto{
+    width: 1384px;
+     height: 392px;
+}
+
+/*-------------------------- Responsive Portatiles --------------------------*/
+@media screen and (max-width: 1024px) {
+    header{
+        flex-direction: column;
+        padding: 20px 20px;
+        width: 100%;
+    }
+    .banner h1 {
+        font-size: 45px;
+        margin-bottom: 10px;
+        color:#02153d;
+    }
+    .banner p {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    header nav {
+        display: flex;
+        gap: 20px;
+        margin: 0 auto;
+        margin-left: auto; 
+    }
+    nav {
+        flex-direction: column;
+        width: 100%;
+    }
+    .menu {
+        flex: none;
+        width: 100%;
+    }
+    #logoWeb{
+        padding-bottom: 20px;
+        cursor: pointer;
+    }
+    .banner{
+        width: auto;
+    }
+    .contenedorCartas{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 2px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .cardResenia {
+        width: 350px;
+        height: auto;
+    }
+    .cardHeader {
+        height: auto;
+        color: white;
+        text-align: center;
+        padding: 5px;
+        font-weight: bold;
+    }
+    .info {
+        justify-content: space-around;
+        align-items: center;
+    }
+    .cardContenido {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+    .infoAbout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    
+    }
+    
+    .historia {
+        width: 395px;
+        height: 394px;
+        margin: 7px;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 8px 8px #BBBBB9;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    
+    .infoAbout p {
+        padding: 13px;
+        font-size: 9px;
+    }
+    .infoHistoria{
+        padding: 0px;
+    }
+    
+    
+    
+    
+    .ImagenHistoria {
+        overflow: hidden;
+        width: 100%;
+        height: 170px;
+    }
+    .imgaenHistoria{
+        width:395px;
+        height: 390px;
+    }
+    
+    
+    .logros {
+        width: 395px;
+        height: 236px;
+        margin: 7px;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 8px 8px #BBBBB9;
+    }
+    
+    .valores{
+        width: 395px;
+        height: 236px;
+        margin: 7px;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 8px 8px #BBBBB9;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .ImagenValores{
+        overflow: hidden;
+        width: 100%;
+        height: 112px;
+    }
+    .imgValores{
+        width: 395px;
+         height:200px;
+    }
+    .infoValores{
+        width: 391px;
+        padding: 0px;
+    }
+    
+    
+    
+    .metodosAprendizaje{
+        width: 395px;
+        height: 122px;
+        margin: 7px;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 8px 8px #BBBBB9;
+    }
+    
+    .contacto{
+        width: 395px;
+        height: 122px;
+        margin: 7px;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 8px 8px #BBBBB9;
+    }
+    
+    .ImagenContacto{
+        overflow: hidden;
+        width: 100%;
+        height: 47px;
+    }
+    
+    .imgContacto{
+        width: 395px;
+         height: 200px;
+    }
+}
+/*-------------------------- Responsive Tablets/Movil--------------------------*/
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .menu {
+        margin: 5px 0;
+        text-align: center;
+    }
+    #logoWeb{
+        padding-bottom: 20px;
+    }
+    .banner h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+        color:#02153d;
+    }
+    .banner p {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .fondo img{
+        width: 100%;
+        background-size:contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .info {
+        display: grid;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /*----------- Jhon ---------*/
+    .center {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

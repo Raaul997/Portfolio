@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family:'paladins';
+    src: url("../fonts/paladins.ttf")
+}
+body{
+    font-family: 'paladins','Arial';
+    color: #fff;
+    background-color: #141414;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* -------------------------------------------------------------------- MENÚ ------------------------------------------------------------------------ */
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    z-index: 100;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li{
+    margin: 0 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover{
+    color: #ff4500;
+}
+header{
+    background: url('../img/banner.jpg') center/cover;
+    height: 100vh;
+    position: relative;
+    color: #fff;
+}
+/* -------------------------------------------------------------------- BANNER ANIMACION ------------------------------------------------------------ */
+.banner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1{
+    font-size: 70px;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    text-shadow: 5px 2px 6px rgba(0,0,0,0.9);
+}
+
+p, h4{
+    font-family: 'Arial black';
+}
+
+.boton1{
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.5rem 2rem;
+    background-color: #ff4500;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+
+.boton1:hover{
+    background-color: #ff6347;
+}
+
+/* --------------------------------------------------------------------------- SERVICIOS ------------------------------------------------------------ */
+
+.servicios{
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #222;
+}
+
+h2{
+    font-size: 2.5rem;
+    color: #ff4500;
+}
+
+.cartaServicios{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.carta{
+    background-color: #333;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.carta:hover{
+    transform: scale(1.1);
+}
+
+.carta h3{
+    color: #ff4500;
+    margin-bottom: 10px;
+}
+
+.carta p{
+    font-size: 1rem;
+}
+/* ------------------------------------------------------------------------ TRABAJADORES ------------------------------------------------------------ */
+
+.nuestrosTrabajadores{
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #333;
+}
+
+.nuestrosTrabajadores p{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.equipo{
+    display: flex;
+    justify-content: center;
+}
+
+.miembros{
+    margin: 0 50px;
+    text-align: center;
+}
+
+.miembros img{
+    border-radius: 50%;
+    width: 200px;
+    margin-bottom: 10px;
+}
+.miembros img:hover to h4{
+    border-color: #f9581e;
+    
+}
+/* ------------------------------------------------------------------------- Youtubers -------------------------------------------------------------- */
+
+.nuestrosYoutubers{
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #333;
+}
+
+.nuestrosYoutubers p{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.youtubers{
+    display: flex;
+    justify-content: center;
+}
+.miembros-youtubers{
+    margin: 0 50px;
+    text-align: center;
+}
+.miembros-youtubers img{
+    border-radius: 50%;
+    width: 200px;
+    margin-bottom: 10px;
+}
+.miembros-youtubers p{
+    font-size: 14px;
+}
+.miembros-youtubers .logos{
+    margin: 20 auto;
+    width:  50px;
+}
+
+h4{
+    font-size: 23px;
+    margin-top: 0px;
+}
+
+/* --------------------------------------------------------------------- FORMULARIO ------------------------------------------------------------ */
+
+.contacto{
+    padding: 60px 20px;
+    background-color: #222;
+    text-align: center;
+}
+
+.contacto form{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contacto input, .contacto textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.contacto button{
+    padding: 10px 20px;
+    background-color: #ff4500;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+
+.contacto button:hover{
+    background-color: #ff6347;
+}
+
+footer{
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p{
+    margin: 0;
+}
+/* -------------------------------------------------------------------- RESPONSIVE MOVIL ------------------------------------------------------------ */
+
+@media (max-width: 768px){
+    h1{
+        letter-spacing: 10px; 
+}
+    h2{
+        font-size: 35px;
+    }
+    .boton1{
+        width: 90%;
+    }
+    .cartaServicios{
+        flex-direction: column;
+}
+    .equipo, .youtubers{
+        flex-direction: column;
+}
+    nav ul{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+}
+}
+/* ------------------------------------------------------------------- RESPONSIVE TABLET ------------------------------------------------------------ */
+
+@media (max-width: 1024px){
+    
+    .cartaServicios{
+        width: 95%;
+}
+    .equipo, .youtubers{
+        flex-direction: column;
+}
+    .miembros-youtubers p{
+        font-size: 17px;
+}
+    .logos{
+        width:  30px;
+}
+    nav ul{
+        margin: 0 auto;
+        justify-content: center;
+        text-align: center;
+        list-style: none;
+}
+    
+}

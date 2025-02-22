@@ -1,0 +1,599 @@
+/*--------------------------------------------------------------------------- HEADER , VARIABLES Y MODO DARK ------------------------------------------------------------------*/
+:root{
+    --primay-color: hsl(173, 56%, 22%); 
+    --text-color: hsl(0, 0%, 31%);   
+    --bg-color: hsl(0, 0%, 90%);
+    --bg-tarjeta-color: hsl(0, 3%, 86%);
+    --transition: color 0.1s, background-color 0.2s ease-in-out;
+    --habilidades-barra-ancho: 0%;
+    --border-radius: 1em;
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    color: var(--primay-color);
+    text-decoration: none;
+}
+body{
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.dark{
+   --primay-color: hsl(172, 84%, 56%);
+   --text-color:  hsl(0, 0%, 83%);
+   --bg-color: hsl(0, 0%, 15%);
+   --bg-tarjeta-color: hsl(0, 0%, 20%);
+   --border-radius: 1em;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-tarjeta-color);
+    height: 55px;
+}
+.cambio{
+    display: flex;
+    align-items: center;
+}
+.cambioContenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.cambioTxt{
+    font-size: 1rem;
+    padding-left: 15px;
+    padding-right: 25px;
+}
+#cambioIdioma img{
+    width: 40px;
+    margin-left: 15px;
+}
+/*------------------------------------------------------------------------------------- TARJETA PRINCIPAL -----------------------------------------------------------------------*/
+
+img{
+    max-width: 100%;
+    display: block;
+}
+#mainEsp{
+    display: grid;
+    padding: 2em;
+    gap: 0.5em;
+    grid-template-columns: min-content 3fr;
+}
+#mainEng{
+    display: none;
+    padding: 2em;
+    gap: 0.5em;
+    grid-template-columns: min-content 3fr;
+}
+.tarjeta{
+    padding: 1em;
+    background-color: var(--bg-tarjeta-color);
+    border-radius: var(--border-radius);
+}
+.tarjetaImg{
+    min-width: 320px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+.tarjetaEncabezado{
+    padding: 1em 0;
+}
+.tarjetaTitulo{
+    margin: 0;
+    font-size: 1.8rem;
+}
+.tarjetaSubtitulo{
+    opacity: 0.6;
+    font-size: 1.2em;
+}
+.tarjetaLinks{
+    margin-bottom: 0.8em;
+    font-size: 1.1em;
+}
+.tarjetaTxt{
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+.icon{
+    margin-right: 1em;
+}
+
+/*------------------------------------------------------------------------------------- TARJETAS -------------------------------------------------------------------------*/
+
+.columna{
+    display: grid;
+    gap: 0.5em;
+}
+.columnaIzq{
+    display: block;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,min-content);
+    align-items: start;
+}
+.columnaDer{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,min-content);
+    align-items: start;
+}
+.habilidades{
+    padding: 1em 0;
+}
+.habilidadesEncabezado{
+    visibility: hidden;
+    display: flex;
+    justify-content: space-between;
+    width: 175px;
+    margin-left: auto;
+}
+
+.habilidadesContenedor{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+.habilidadesLenguajes{
+    margin: 0;
+    font-size: 1.4rem;
+}
+.habilidadBarra, .habilidadBarra::after{
+    position: relative;
+    width: 175px;
+    height: 9px;
+    background-color: #888;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+/*------------------------------------------------------------------------------------- HABILIDADES ANIMACION ------------------------------------------------------------*/
+
+.habilidadBarra::after{
+    content:"";
+    position: absolute;
+    background-color: var(--primay-color);
+    transition: var(--transition);
+    left: -175px;
+    animation: animacion-Barra 2s ease-in-out forwards;
+}
+.habilidadBarra100::after{
+    --habilidades-barra-ancho:100%;
+}
+.habilidadBarra95::after{
+    --habilidades-barra-ancho:95%;
+}
+.habilidadBarra90::after{
+    --habilidades-barra-ancho:90%;
+}
+.habilidadBarra85::after{
+    --habilidades-barra-ancho:85%;
+}
+.habilidadBarra80::after{
+    --habilidades-barra-ancho:80%;
+}
+.habilidadBarra75::after{
+    --habilidades-barra-ancho:75%;
+}
+.habilidadBarra70::after{
+    --habilidades-barra-ancho:70%;
+}
+.habilidadBarra65::after{
+    --habilidades-barra-ancho:65%;
+}
+.habilidadBarra60::after{
+    --habilidades-barra-ancho:60%;
+}
+.habilidadBarra55::after{
+    --habilidades-barra-ancho:55%;
+}
+.habilidadBarra50::after{
+    --habilidades-barra-ancho:50%;
+}
+.habilidadBarra45::after{
+    --habilidades-barra-ancho:45%;
+}
+.habilidadBarra40::after{
+    --habilidades-barra-ancho:40%;
+}
+.habilidadBarra35::after{
+    --habilidades-barra-ancho:35%;
+}
+.habilidadBarra30::after{
+    --habilidades-barra-ancho:30%;
+}
+.habilidadBarra25::after{
+    --habilidades-barra-ancho:25%;
+}
+.habilidadBarra20::after{
+    --habilidades-barra-ancho:20%;
+}
+.habilidadBarra15::after{
+    --habilidades-barra-ancho:15%;
+}
+.habilidadBarra10::after{
+    --habilidades-barra-ancho:10%;
+}
+.habilidadBarra5::after{
+    --habilidades-barra-ancho:5%;
+}
+@keyframes animacion-Barra{
+    to{
+        transform: translateX(var(--habilidades-barra-ancho));
+    }
+}
+
+/*------------------------------------------------------------------------------------- EXPERIENCIA ----------------------------------------------------------------------------*/
+.tarjetaExperiencia{
+    margin-top: 0.5em;
+}
+.empresa{
+    display: block;
+}
+.experienciaImg{
+    max-width: 85%;
+    height: auto;
+    margin-top: 3.6em;
+    margin-right: 0.5em;
+}
+.comida{
+    max-width: 80%;
+    margin-top: 3.6em;
+    margin-right: -10em;
+}
+.nombreEmpresa{
+    font-size: 1.1em;
+    position: absolute;
+    margin-top: 1.2em;
+    margin-right: 0em;
+    color: var(--primay-color);
+    transition: var(--transition);
+    text-align: left;
+}
+.experiencia{
+    display: flex;
+    align-items: start;
+    margin-bottom: 1em;
+    padding: 1em;
+    border: 2px solid var(--primay-color);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+.experienciaTiempo{
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+    color: var(--primay-color);
+    transition: var(--transition);
+    text-align: center;
+}
+.trabajo{
+    margin: 0;
+    margin-bottom: 0.5em;
+    font-size: 1.3rem;
+}
+.experienciaBreve{
+    font-size: 0.9rem;
+}
+/*------------------------------------------------------------------------------------- FORMACION ----------------------------------------------------------------------------*/
+.tarjetaFormación{
+    margin-top: 0.5em;
+}
+.formacion{
+    display: block;
+    align-items: start;
+    margin-bottom: 1em;
+    padding: 1em;
+    border: 2px solid var(--primay-color);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+.titulo{
+    margin: 0;
+    margin-bottom: 0.5em;
+    color: var(--primay-color);
+    transition: var(--transition);
+}
+.nombreCentro{
+    margin-top: 1em;
+    margin-right: 2.5em;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+/*------------------------------------------------------------------------------------- HOBBIES Y SLIDER INFINITO ----------------------------------------------------------------------------*/
+
+.hobbiesContenido{
+    display: flex;
+    width: 30vw;
+}
+.hobbiesResumen{
+    width: 18vw;
+    margin-right: 1em;
+}
+.hobbiesTxt{
+    line-height: 1.3rem;
+}
+.tarjetaContenido{
+    width: 25vw;
+    height: 246px;
+    overflow: hidden;
+    border-left: 5px solid var(--primay-color);
+    border-radius: var(--border-radius);
+}
+.slider{
+    width: 75vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+.slide-track{
+    display: flex;
+    animation: scroll 35s linear infinite alternate-reverse;
+    height: 100%;
+    width: calc(200px * 12);
+}
+.slide{
+    width: 320px;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-300px * 6));
+    }
+}
+
+/*------------------------------------------------------------------------------------- WEBS ------------------------------------------------------------------------------*/
+
+.tarjetaWebs{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+.proyecto{
+    position: relative;
+    margin-left: 0.5em;
+}
+.proyectoEtiquetas{
+    position: relative;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 0.5em 0;
+    font-size: 1rem;
+    width: 175px;
+}
+.proyectoEtiqueta{
+    padding: 0.4em 0.5em;
+    margin-right: 0.5em;
+    border-radius: var(--border-radius);
+    background-color: var(--primay-color);
+    color: var(--bg-color);
+}
+.id{
+    display: flex;
+    align-items: center;
+}
+.proyectoEtiqueta.PDF{
+    margin-left: auto;
+    max-width: 38px;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    width: 180px;
+    position: absolute;
+    bottom: 1em;
+}
+.button{
+    width: 100px;
+    line-height: 2.5;
+    text-align: center;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    background-color: var(--primay-color);
+    color: var(--bg-color);
+}
+/*------------------------------------------------------------------------------------- RESPONSIVE TABLET -------------------------------------------------------------------*/
+
+@media (max-width: 1024px){    
+    .tarjetaWebs{
+        display: block;
+        grid-column-start: 1;
+        width: 92%;
+    }
+    .tarjetaWebImg {
+        width: 100%;
+        height: 100%;  
+        display: block;            
+        align-items: center;      
+        justify-content: center;  
+        overflow: hidden;      
+    }
+    .tarjetaWebImg img {
+        margin-left: 10px;
+        width: 90%;   
+        object-fit: scale-down;
+        border-radius: var(--border-radius);
+    }
+    .proyectoEtiquetas{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+    .proyectoEtiqueta{
+        width: 100px;
+        font-size: 0.9rem;
+        margin-right: 1vw;
+    }
+    .buttons{
+        display: block;
+        justify-content: center;
+        width: 80px;
+        position: relative;
+        bottom: 1em;
+        text-align: center;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+        background-color: var(--primay-color);
+        color: var(--bg-color);
+    }
+    .tarjetaHabilidades{
+        display: block;
+        grid-column-start: 1;
+        width: 46vw;
+
+    }
+    .habilidadesLenguajes{
+        font-size: 1.4rem;
+        margin-right: 4rem;
+    }
+    .habilidadBarra, .habilidadesEncabezado{
+        width: 17vw; 
+    }
+    .hobbiesContenido{
+        display: block;
+    }
+    .hobbiesResumen{
+        width: 45vw;
+    }
+    .tarjetaContenido{
+        width: 42vw;
+        height: 246px;
+        overflow: hidden;
+        border-top: 5px solid var(--primay-color);
+        border-left: none;
+        border-radius: var(--border-radius);
+    }
+    .slider {
+        width: 75vw;
+        height: auto;
+        margin: auto;
+        overflow: hidden;
+    }
+    .slide-track {
+        display: flex;
+        animation: scroll 20s linear infinite alternate-reverse;
+        height: 100%;
+        width: calc(200px * 12);
+    }
+    
+}
+
+/*------------------------------------------------------------------------------------- RESPONSIVE MOVIL --------------------------------------------------------------------*/
+
+@media (max-width: 768px){
+.header{
+    width: 410px;
+}
+.tarjetaPerfil{
+    width: 90vw;
+}
+#mainEsp{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+#mainEng{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.columnaIzq{
+    display: block;
+}
+.columnaDer{
+    grid-template-columns: repeat(1);
+    grid-template-rows: repeat(1);
+    align-items: start;
+}
+.tarjetaExperiencia, .tarjetaFormación {
+    width: 90vw;
+}
+.tarjetaWebs{
+    display: block;
+    grid-column-start: 1;
+    width: 93%;
+}
+.tarjetaWebImg {
+    width: 100%;
+    height: 100%;  
+    display: block;            
+    align-items: center;      
+    justify-content: center;  
+    overflow: hidden;      
+}
+.tarjetaWebImg img {
+    margin-left: -25px;
+    width: 90%;   
+    object-fit: scale-down;
+    border-radius: var(--border-radius);
+}
+.proyectoEtiquetas{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.proyectoEtiqueta{
+    width: 100px;
+    font-size: 0.9rem;
+    margin-right: 1vw;
+}
+.buttons{
+    display: block;
+    justify-content: center;
+    width: 80px;
+    position: relative;
+    bottom: 1em;
+    text-align: center;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    background-color: var(--primay-color);
+    color: var(--bg-color);
+}
+.tarjetaHabilidades{
+    display: block;
+    grid-column-start: 1;
+    width: auto;
+}
+.habilidadesLenguajes{
+    font-size: 1.2rem;
+}
+.habilidadBarra, .habilidadesEncabezado{
+    width: 35vw; 
+}
+.hobbiesContenido{
+    display: block;
+}
+.hobbiesResumen{
+    width: 80vw;
+}
+.tarjetaContenido{
+    width: 75vw;
+    height: 246px;
+    overflow: hidden;
+    border-top: 5px solid var(--primay-color);
+    border-left: none;
+    border-radius: var(--border-radius);
+}
+.slider {
+    width: 75vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+.slide-track {
+    display: flex;
+    animation: scroll 20s linear infinite alternate-reverse;
+    height: 100%;
+    width: calc(200px * 12);
+}
+}
