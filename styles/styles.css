@@ -407,6 +407,21 @@ img{
 /*------------------------------------------------------------------------------------- RESPONSIVE TABLET -------------------------------------------------------------------*/
 
 @media (max-width: 1024px){    
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .header .cambio {
+        margin: 0 10px;
+      }
+    
+      .header .cambioContenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
     .tarjetaWebs{
         display: block;
         grid-column-start: 1;
