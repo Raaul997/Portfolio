@@ -408,11 +408,13 @@ img{
 
 @media (max-width: 1024px){    
     .header {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-      }
+        margin: 0 auto;
+    }
     .tarjetaWebs{
         display: block;
         grid-column-start: 1;
