@@ -406,13 +406,23 @@ img{
 }
 /*------------------------------------------------------------------------------------- RESPONSIVE TABLET -------------------------------------------------------------------*/
 
-@media (max-width: 1024px){    
+@media (max-width: 1024px){   
+    #mainEsp{
+        display: grid;
+        padding: 2em;
+        gap: 0.5em;
+        grid-template-columns: min-content 3fr;
+    }
+    #mainEng{
+        display: none;
+        padding: 2em;
+        gap: 0.5em;
+        grid-template-columns: min-content 3fr;
+    } 
     .header {
-        width: 100%;
         display: flex;
-        justify-content: center;
         align-items: center;
-        text-align: center;
+        justify-content: center;
         margin: 0 auto;
     }
     .tarjetaWebs{
@@ -502,17 +512,14 @@ img{
 
 @media (max-width: 768px){
 .header{
-    width: 410px;
-}
-.tarjetaPerfil{
-    width: 90vw;
+    display: fixed;
 }
 #mainEsp{
     display: grid;
     grid-template-columns: 1fr;
 }
 #mainEng{
-    display: grid;
+    display: none;
     grid-template-columns: 1fr;
 }
 .columnaIzq{
@@ -523,9 +530,7 @@ img{
     grid-template-rows: repeat(1);
     align-items: start;
 }
-.tarjetaExperiencia, .tarjetaFormación {
-    width: 90vw;
-}
+
 .tarjetaWebs{
     display: block;
     grid-column-start: 1;
@@ -540,7 +545,7 @@ img{
     overflow: hidden;      
 }
 .tarjetaWebImg img {
-    margin-left: -25px;
+    margin-left: 15px;
     width: 90%;   
     object-fit: scale-down;
     border-radius: var(--border-radius);
@@ -567,11 +572,7 @@ img{
     background-color: var(--primay-color);
     color: var(--bg-color);
 }
-.tarjetaHabilidades{
-    display: block;
-    grid-column-start: 1;
-    width: auto;
-}
+
 .habilidadesLenguajes{
     font-size: 1.2rem;
 }
@@ -581,7 +582,11 @@ img{
 .hobbiesContenido{
     display: block;
 }
-.hobbiesResumen{
+
+.tarjetaHabilidades{
+    width: 85vw;
+}
+.hobbiesTxt{
     width: 80vw;
 }
 .tarjetaContenido{
@@ -593,7 +598,6 @@ img{
     border-radius: var(--border-radius);
 }
 .slider {
-    width: 75vw;
     height: auto;
     margin: auto;
     overflow: hidden;
@@ -602,6 +606,5 @@ img{
     display: flex;
     animation: scroll 20s linear infinite alternate-reverse;
     height: 100%;
-    width: calc(200px * 12);
 }
 }
